@@ -19,32 +19,117 @@ class _HomePageState extends State<HomePage> {
           fontWeight: FontWeight.bold
         ),),
       ),
+      drawer: Drawer(
+        child: new Column(
+            children:<Widget>[
+              Container(
+                  padding: EdgeInsets.only(top:50.0),
+                  height: 250.0,
+                  width: double.infinity,
+                  color: Colors.blueAccent,
+                  child: new Column(
+                    children: <Widget>[
+                      Icon(
+                        Icons.account_circle,
+                        color: Colors.white,
+                        size: 100.0,),
+
+                      SizedBox(
+                        height: 10.0,
+                      ),
+
+                      Text("Archana",style: new TextStyle(
+                          color: Colors.white,
+                          fontSize: 20.0
+                      )),
+
+                      Text("archanapunitha30@gmail.com",style: new TextStyle(
+                          color: Colors.white54,
+                          fontSize: 12.0
+                      ))
+                    ],
+                  )),
+              ListTile(
+                /*selected: CurrentIndex==1? true:false,
+                onTap: () {
+                  setCurrentIndex(1);
+                },*/
+                leading: Icon(Icons.add_box),
+                title: new Text("Banking"),
+              ),
+              ListTile(
+               /* selected: CurrentIndex==2? true:false,
+                onTap: () {
+                  setCurrentIndex(2);
+                },*/
+                leading: Icon(Icons.payment),
+                title: new Text("Payment"),
+              ),
+              ListTile(
+                /*selected: CurrentIndex==3? true:false,
+                onTap: () {
+                  setCurrentIndex(3);
+                },*/
+                leading: Icon(Icons.calendar_view_day),
+                title: new Text("Calender"),
+              ),
+              ListTile(
+                /*selected: CurrentIndex==4? true:false,
+                onTap: () {
+                  setCurrentIndex(4);
+                },*/
+                leading: Icon(Icons.backup),
+                title: new Text("Backup"),
+              ),
+              ListTile(
+               /* selected: CurrentIndex==5? true:false,
+                onTap: () {
+                  setCurrentIndex(5);
+                } ,*/
+                leading: Icon(Icons.track_changes),
+                title: new Text("Tracking"),
+              ),
+            ]
+        ),
+      ),
       bottomNavigationBar: BottomNavigationBar(
         currentIndex: _currentIndex,
+        type: BottomNavigationBarType.fixed,
+        iconSize: 20,
         items: [
           new BottomNavigationBarItem(
               icon: Icon(Icons.home),
-              title: Text('Home'),
+              title: Text('Home',style: TextStyle(
+                fontSize: 12
+              ),),
             backgroundColor: Colors.blue
           ),
           new BottomNavigationBarItem(
-              icon: Icon(Icons.mail),
-              title: Text('Message'),
-              backgroundColor: Colors.blue
-          ),
-          new BottomNavigationBarItem(
               icon: Icon(Icons.person),
-              title: Text('Profile'),
+              title: Text('Profile',style: TextStyle(
+                fontSize: 12,
+              ),),
               backgroundColor: Colors.blue
           ),
           new BottomNavigationBarItem(
               icon: Icon(Icons.account_circle),
-              title: Text('Account'),
+              title: Text('Account',style: TextStyle(
+                fontSize: 12,
+              ),),
               backgroundColor: Colors.blue
           ),
           new BottomNavigationBarItem(
               icon: Icon(Icons.search),
-              title: Text('Search'),
+              title: Text('Search',style: TextStyle(
+                fontSize: 12,
+              ),),
+              backgroundColor: Colors.blue
+          ),
+          new BottomNavigationBarItem(
+              icon: Icon(Icons.settings),
+              title: Text('Setting',style: TextStyle(
+                fontSize: 12,
+              ),),
               backgroundColor: Colors.blue
           ),
         ],
