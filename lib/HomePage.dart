@@ -7,14 +7,41 @@ class HomePage extends StatefulWidget {
 
 class _HomePageState extends State<HomePage> {
   int _currentIndex=0;
-  final List<Widget> children=[];
+  final tabs=[
+    Center(child: Text('Welcome Home Screen',style: TextStyle(
+      color: Colors.deepPurpleAccent,
+      fontSize: 20,
+      fontWeight: FontWeight.bold,
+    ),),),
+    ProfilePage(),
+    Center(child: Text('See our profile',style: TextStyle(
+      color: Colors.deepPurpleAccent,
+      fontSize: 20,
+      fontWeight: FontWeight.bold,
+    ),),),
+    Center(child: Text('Check our Account Details',style: TextStyle(
+      color: Colors.deepPurpleAccent,
+      fontSize: 20,
+      fontWeight: FontWeight.bold,
+    ),),),
+    Center(child: Text('Search Here',style: TextStyle(
+      color: Colors.deepPurpleAccent,
+      fontSize: 20,
+      fontWeight: FontWeight.bold,
+    ),),),
+    Center(child: Text('Change Our Settings',style: TextStyle(
+      color: Colors.deepPurpleAccent,
+      fontSize: 20,
+      fontWeight: FontWeight.bold,
+    ),),),
+  ];
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         title: Text("Bottom Navigation Demo",style: TextStyle(
           color: Colors.white,
-          backgroundColor: Colors.blue,
+          backgroundColor: Colors.deepPurpleAccent,
           fontSize: 15.0,
           fontWeight: FontWeight.bold
         ),),
@@ -26,7 +53,7 @@ class _HomePageState extends State<HomePage> {
                   padding: EdgeInsets.only(top:50.0),
                   height: 250.0,
                   width: double.infinity,
-                  color: Colors.blueAccent,
+                  color: Colors.deepPurpleAccent,
                   child: new Column(
                     children: <Widget>[
                       Icon(
@@ -92,6 +119,7 @@ class _HomePageState extends State<HomePage> {
             ]
         ),
       ),
+      body: tabs[_currentIndex],
       bottomNavigationBar: BottomNavigationBar(
         currentIndex: _currentIndex,
         type: BottomNavigationBarType.fixed,
@@ -102,35 +130,35 @@ class _HomePageState extends State<HomePage> {
               title: Text('Home',style: TextStyle(
                 fontSize: 12
               ),),
-            backgroundColor: Colors.blue
+            backgroundColor: Colors.deepPurpleAccent
           ),
           new BottomNavigationBarItem(
               icon: Icon(Icons.person),
               title: Text('Profile',style: TextStyle(
                 fontSize: 12,
               ),),
-              backgroundColor: Colors.blue
+              backgroundColor: Colors.deepPurpleAccent
           ),
           new BottomNavigationBarItem(
               icon: Icon(Icons.account_circle),
               title: Text('Account',style: TextStyle(
                 fontSize: 12,
               ),),
-              backgroundColor: Colors.blue
+              backgroundColor: Colors.deepPurpleAccent
           ),
           new BottomNavigationBarItem(
               icon: Icon(Icons.search),
               title: Text('Search',style: TextStyle(
                 fontSize: 12,
               ),),
-              backgroundColor: Colors.blue
+              backgroundColor: Colors.deepPurpleAccent
           ),
           new BottomNavigationBarItem(
               icon: Icon(Icons.settings),
               title: Text('Setting',style: TextStyle(
                 fontSize: 12,
               ),),
-              backgroundColor: Colors.blue
+              backgroundColor: Colors.deepPurpleAccent
           ),
         ],
         onTap: (Index){
