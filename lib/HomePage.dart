@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import 'ProfilePage.dart';
+
 class HomePage extends StatefulWidget {
   @override
   _HomePageState createState() => _HomePageState();
@@ -14,11 +16,11 @@ class _HomePageState extends State<HomePage> {
       fontWeight: FontWeight.bold,
     ),),),
     ProfilePage(),
-    Center(child: Text('See our profile',style: TextStyle(
+    /*Center(child: Text('See our profile',style: TextStyle(
       color: Colors.deepPurpleAccent,
       fontSize: 20,
       fontWeight: FontWeight.bold,
-    ),),),
+    ),),),*/
     Center(child: Text('Check our Account Details',style: TextStyle(
       color: Colors.deepPurpleAccent,
       fontSize: 20,
@@ -42,7 +44,7 @@ class _HomePageState extends State<HomePage> {
         title: Text("Bottom Navigation Demo",style: TextStyle(
           color: Colors.white,
           backgroundColor: Colors.deepPurpleAccent,
-          fontSize: 15.0,
+          fontSize: 20.0,
           fontWeight: FontWeight.bold
         ),),
       ),
