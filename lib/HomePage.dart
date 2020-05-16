@@ -14,45 +14,46 @@ class _HomePageState extends State<HomePage> {
       appBar: AppBar(
         title: Text("Bottom Navigation Demo",style: TextStyle(
           color: Colors.white,
-          backgroundColor: Colors.deepPurpleAccent,
+          backgroundColor: Colors.blue,
           fontSize: 15.0,
           fontWeight: FontWeight.bold
         ),),
       ),
-      body: children[_currentIndex],
       bottomNavigationBar: BottomNavigationBar(
-        onTap: onTapTrapped,
         currentIndex: _currentIndex,
         items: [
           new BottomNavigationBarItem(
               icon: Icon(Icons.home),
               title: Text('Home'),
+            backgroundColor: Colors.blue
           ),
           new BottomNavigationBarItem(
               icon: Icon(Icons.mail),
               title: Text('Message'),
+              backgroundColor: Colors.blue
           ),
           new BottomNavigationBarItem(
               icon: Icon(Icons.person),
               title: Text('Profile'),
+              backgroundColor: Colors.blue
           ),
           new BottomNavigationBarItem(
               icon: Icon(Icons.account_circle),
               title: Text('Account'),
+              backgroundColor: Colors.blue
           ),
           new BottomNavigationBarItem(
               icon: Icon(Icons.search),
               title: Text('Search'),
+              backgroundColor: Colors.blue
           ),
-
         ],
+        onTap: (Index){
+          setState(() {
+            _currentIndex=Index;
+          });
+        },
       ),
     );
-  }
-
-  void onTapTrapped(int Index) {
-    setState(() {
-      _currentIndex=Index;
-    });
   }
 }
